@@ -47,4 +47,3 @@ jobs:
           labels: automation
           branch: automation/update-dependencies
           delete-branch: true
-          token: "${{ secrets.PA_TOKEN }}"
