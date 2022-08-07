@@ -4,10 +4,14 @@ import { unnullish } from "./unnullish.ts";
 
 Deno.test("unnullish() returns undefined when the value is undefined", () => {
   assertEquals(unnullish(undefined, unreachable), undefined);
+  // Type-check
+  const _: string | undefined = unnullish("" as string | undefined, () => "");
 });
 
-Deno.test("unnullish() returns null when the value is null", () => {
-  assertEquals(unnullish(null, unreachable), null);
+Deno.test("unnullish() returns undefined when the value is null", () => {
+  assertEquals(unnullish(null, unreachable), undefined);
+  // Type-check
+  const _: string | undefined = unnullish("" as string | null, () => "");
 });
 
 Deno.test("unnullish() returns the result of the callback when the value is string", () => {
