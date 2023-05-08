@@ -1,4 +1,4 @@
-import { build, emptyDir } from "https://deno.land/x/dnt@0.31.0/mod.ts";
+import { build, emptyDir } from "https://deno.land/x/dnt@0.34.0/mod.ts";
 
 const name = "unnullish";
 const version = Deno.args[0];

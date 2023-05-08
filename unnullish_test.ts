@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.164.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.186.0/testing/asserts.ts";
 import { unreachable } from "https://deno.land/x/unreachable@v0.1.0/mod.ts";
 import { unnullish } from "./unnullish.ts";
 
