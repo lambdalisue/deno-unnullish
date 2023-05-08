@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: "https://registry.npmjs.org"
       - name: Build
-        run: make build-npm
+        run: deno task build-npm
       - name: Publish
         run: |
           cd npm
