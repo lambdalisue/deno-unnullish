@@ -1,7 +1,8 @@
 # unnullish
 
+[![jsr](https://img.shields.io/jsr/v/%40lambdalisue/unnullish?logo=javascript&logoColor=white)](https://jsr.io/@lambdalisue/unnullish)
+[![denoland](https://img.shields.io/github/v/release/lambdalisue/deno-unnullish?logo=deno&label=denoland)](https://github.com/lambdalisue/deno-unnullish/releases)
 [![npm](http://img.shields.io/badge/available%20on-npm-lightgrey.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/unnullish)
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/unnullish)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/unnullish/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-unnullish/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-unnullish/actions?query=workflow%3ATest)
 [![npm version](https://badge.fury.io/js/unnullish.svg)](https://badge.fury.io/js/unnullish)
@@ -23,7 +24,7 @@ The function is useful when you want to apply some transformation functions to
 optional values. For example,
 
 ```typescript
-import { unnullish } from "./mod.ts";
+import { unnullish } from "https://deno.land/x/unnullish@$MODULE_VERSION/mod.ts";
 
 type Options = {
   foo?: string;
@@ -54,7 +55,7 @@ you may need to use nullish coalescing operator to normalize the result. For
 example,
 
 ```typescript
-import { unnullish } from "./mod.ts";
+import { unnullish } from "https://deno.land/x/unnullish@$MODULE_VERSION/mod.ts";
 
 console.log(unnullish(null, () => 0));
 // -> undefined
@@ -66,14 +67,6 @@ console.log(unnullish(null, () => 0) ?? null);
 console.log(unnullish(undefined, () => 0) ?? null);
 // -> null
 ```
-
-##### Deno
-
-Use `import { unnullish } from "https://deno.land/x/unnullish/mod.ts"`;
-
-##### Node
-
-Use `import { unnullish } from "unnullish"`;
 
 ## License
 
