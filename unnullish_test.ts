@@ -1,5 +1,5 @@
-import { assertEquals } from "https://deno.land/std@0.186.0/testing/asserts.ts";
-import { unreachable } from "https://deno.land/x/unreachable@v0.1.0/mod.ts";
+import { assertEquals } from "@std/assert";
+import { unreachable } from "@lambdalisue/unreachable";
 import { unnullish } from "./unnullish.ts";
 
 Deno.test("unnullish() returns undefined when the value is undefined", () => {

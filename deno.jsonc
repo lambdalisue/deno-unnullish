@@ -1,9 +1,16 @@
 {
-  "lock": false,
+  "name": "@lambdalisue/unnullish",
+  "version": "0.0.0",
+  "exports": "./mod.ts",
   "tasks": {
     "build-npm": "deno run -A scripts/build_npm.ts $(git describe --tags --always --dirty)",
-    "test": "deno test --unstable -A --parallel",
-    "check": "deno check --unstable $(find . -name '*.ts')",
-    "upgrade": "deno run -A https://deno.land/x/udd/main.ts $(find . -name '*.ts' -not -path '*/npm/*')"
+    "test": "deno test -A --parallel --doc --shuffle",
+    "check": "deno check **/*.ts"
+  },
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.1",
+    "@lambdalisue/unreachable": "jsr:@lambdalisue/unreachable@^1.0.1",
+    "@std/assert": "jsr:@std/assert@^0.221.0",
+    "https://deno.land/x/unnullish@$MODULE_VERSION/": "./"
   }
 }
